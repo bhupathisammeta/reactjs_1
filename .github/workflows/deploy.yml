@@ -31,22 +31,4 @@ jobs:
         publish_dir: ./build
         cname: bhupathisammeta.github.io  # Replace with your domain
 
-    - name: Slack notification
-      uses: slackapi/slack-github-action@v1.24.0
-      if: always()
-      with:
-        webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
-        payload: |
-          {
-            "text": "Deployment ${{ job.status }}",
-            "blocks": [
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "React App Deployment: ${{ job.status }}\nBranch: ${{ github.ref }}\nCommit: ${{ github.sha }}"
-                }
-              }
-            ]
-          }
-      continue-on-error: true
+  
