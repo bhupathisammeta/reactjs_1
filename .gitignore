@@ -4,6 +4,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Lock files should be committed (uncomment to ignore)
+# package-lock.json
+# yarn.lock
+
 # Production
 /build
 /dist
